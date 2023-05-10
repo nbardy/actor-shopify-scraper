@@ -296,9 +296,7 @@ export const checkForRobots = async ({ checkForBanner = true, filteredSitemapUrl
                 throw new Error('Body is empty');
             }
 
-            if (checkForBanner && !body.includes('Shopify')) {
-                throw new Error('Not a Shopify URL');
-            }
+          
 
             if (!body.includes('Sitemap: ')) {
                 throw new Error('No sitemap URL');
